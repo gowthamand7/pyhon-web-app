@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Welcome {{ email }}</h1>
+    <div class="container">
+        <h1>Welcome {{ email }}</h1>
+
+        <a href="/blog/new">
+            <button class="btn btn-primary"> New Blog </button>
+        </a>
+
+        <a href="/blogs">
+            <button class="btn btn-primary"> View MyBlog </button>
+        </a>
+
+        <a href="/logout">
+            <button class="btn btn-primary"> Logout </button>
+        </a>
+    </div>
 {% endblock %}
