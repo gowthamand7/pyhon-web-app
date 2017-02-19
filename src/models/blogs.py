@@ -45,4 +45,4 @@ class Blog(object):
 
     @classmethod
     def findByAuthorId(cls,id):
-        return [cls(**blog) for blog in  Database.find(collection='posts',query={'authorId':id})]
+        return [cls(**blog) for blog in  Database.find(collection='blogs',query={'authorId':id})]

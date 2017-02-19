@@ -64,7 +64,8 @@ class User(object):
             blog.newPost(title=title,content=content,dateCreated=dateCreated)
 
     def getBlogs(self):
-        Blog.findByAuthorId(self._id)
+        return Blog.findByAuthorId(self._id)
+
 
     def saveToMongo(self):
         Database.insert(collection='users',data=self.json())
@@ -72,6 +73,7 @@ class User(object):
     def json(self):
         return {
             'email':self.email,
-            'password':self.password
+            'password':self.password,
+            '_id':self._id
         }
 
