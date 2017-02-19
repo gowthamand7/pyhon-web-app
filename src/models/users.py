@@ -34,7 +34,7 @@ class User(object):
     @staticmethod
     def register(email,password):
         user = User.getByEmail(email)
-        if user is not None:
+        if user is None:
             user = User(email=email,password=password)
             user.saveToMongo()
             session['email'] = email
