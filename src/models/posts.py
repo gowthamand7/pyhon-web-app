@@ -31,7 +31,7 @@ class Post(object):
     @classmethod
     def fromMonogo(cls, id):
         postData = Database.findOne(collection='posts',query={'_id':id})
-        return cls(**postData) #**postdata It will map the argument name and array key name
+        return cls(**postData) #**postdata It will map the class argument name and array key name
 
     @classmethod
     def fromBlog(cls, id):
